@@ -1,0 +1,12 @@
+
+<div class="row text-center">
+  <% @recipes.each do |recipe| %>
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <img src="<%= recipe.photo.url %>" width="400">
+        <p><strong> <%= recipe.title %></strong></p>
+        <a href="<%=recipe_path(recipe.id) %>"><button class="btn btn-dark" >View Recipe</button></a>
+      </div>
+    </div>
+  <% end %>
+</div>

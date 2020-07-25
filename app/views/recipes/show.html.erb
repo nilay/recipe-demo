@@ -1,0 +1,5 @@
+<% if @recipe.blank? %>
+  <h2>Invalid Recipe</h2>
+<% else %>
+ <%= render "details" %>
+<% end %>

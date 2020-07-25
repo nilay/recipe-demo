@@ -1,0 +1,18 @@
+
+<div class="row">
+  <div class="col-sm-4">
+    <img src="<%= @recipe.photo.url %>" width="400">
+  </div>
+  <div class="col-sm-4">
+    <p><strong> <%= @recipe.title %></strong></p>
+    <% if @recipe.chef.present? %>
+        <p> By: <%= @recipe.chef.name %> </p></br>
+    <%end%>
+    <p> <%= @recipe.description %> </p>
+    <p>
+      <% @recipe.tags&.each do |tag| %>
+          <a href="#">#<%= tag.name %></a>
+      <%end%>
+    </p>
+  </div>
+</div>
